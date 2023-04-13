@@ -7,4 +7,6 @@ module.exports = function (app) {
     
     app.route('/')
         .get(jsonku.index)
+    app.route('/tampilData')
+        .get(jsonku.tampilDataMahasiswa)
 }
