@@ -18,3 +18,16 @@ exports.tampilDataMahasiswa = function (req, res) {
         }
     })
 }
+
+// meanmpilkan data mahasiswa berdasarkan id 
+exports.tampilData_ID = function (req, res) {
+    let id = req.params.id;
+    connection.query('SELECT * FROM mahasiswa WHERE jurusan = "Teknik Mesin" ', function (error, rows, fileds) {
+        if (error) {
+            connection.log(error)
+        }
+        else {
+            response.ok(rows, res)
+        }
+    })
+}
