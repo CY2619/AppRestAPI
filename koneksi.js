@@ -6,7 +6,7 @@ const conn = mysql.createConnection({
   user: "root",
   password: "",
   database: "dbrestapi",
-  port:3000
+  port:3001
 });
 
 conn.connect((err) => {
@@ -15,4 +15,3 @@ conn.connect((err) => {
 });
 
 module.exports = conn;
- 
